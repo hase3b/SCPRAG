@@ -40,6 +40,7 @@ The primary goal of this project is to develop a robust, efficient, and reliable
   * Compare the LLMs with different query types on the best generation and retrieval strategy.
 * Evaluation & Results
   * For the best generation and retrieval strategy along with superior LLM, compare RAG outputs for multiple queries with different query types for different documents.
+
 Note: For further details on parts 2-5 refer to SCPRAG.ipynb in the repo.
 
 ## **Repository Contents**
@@ -56,6 +57,7 @@ Note: For further details on parts 2-5 refer to SCPRAG.ipynb in the repo.
 * Metadata Embedding Strategy: Embed metadata separately for improved matching precision.
 * Self-Querying Mechanism: Automate metadata tagging for enhanced search flexibility.
 * Higher-Dimension Embeddings: Experiment with models offering richer representations for complex legal texts.
+
 Note: More on this is present in the Report.PDF.
 
 ## **Acknowledgments**
