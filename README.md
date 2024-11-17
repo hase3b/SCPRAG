@@ -15,7 +15,7 @@ The primary goal of this project is to develop a robust, efficient, and reliable
   * BM25
   * Ensemble Retriever (Best Performer)
 * Chunking Strategy & Metadata Handling:
-  * Metadata embedding in the splitted chunks for improved precision and relevance during retrieval.
+  * Metadata embedded in the split chunks for improved precision and relevance during retrieval.
 * Summarization Strategies:
   * Without Query Bias: Generate summaries without including the user query to avoid biases in the generated answers.
 * Long Context Handling:
