@@ -2,7 +2,7 @@
 This repository contains the implementation of a Retrieval-Augmented Generation (RAG) system designed for judicial use cases, specifically for the Supreme Court of Pakistan (SCP). The project focuses on leveraging Large Language Models (LLMs) and advanced retrieval techniques to analyze and generate detailed, relevant, and accurate responses to legal queries based on the SCP Judgements.
 
 ## **Project Overview**
-The primary goal of this project is to develop a robust, efficient, and reliable RAG pipeline capable of handling legal texts, retrieving relevant sections, and generating comprehensive summaries and answers to user queries. The system integrates advanced techniques for metadata handling, retrieval, and generation enhancement through context handling and summarization to provide high-quality outputs tailored to the judicial domain.
+The primary goal of this project is to develop a robust, efficient, and reliable RAG pipeline capable of handling legal texts, retrieving relevant sections, and generating comprehensive summaries and answers to user queries. The system integrates advanced techniques for metadata handling, retrieval, and generation enhancement through context handling and summarization to provide high-quality outputs tailored to the judicial domain. This project is a collaborative effort of Abdul Haseeb, Annayah Usman, and Sawera Hanif.
 
 ## **Key Features**
 * LLMs Used:
@@ -22,23 +22,23 @@ The primary goal of this project is to develop a robust, efficient, and reliable
   * Implemented Long Context Reordering to improve context flow before summarization and query answering.
 
 ## **Workflow**
-1. Corpus Generation & Preprocessing
+* Corpus Generation & Preprocessing
   * Step 1: Web scrape SCP judgments and associated metadata (titles, case numbers, author judges, etc.). For further details refer to the DocSrapper.ipynb in the repo.
   * Step 2: Convert judgment PDFs to text (incld. OCR) and link them with metadata. For further details refer to the PDF2TXT&CSV.ipynb in the repo.
   * Step 3: Preprocess text by removing redundant elements, normalizing whitespace, and cleaning content. For further details refer to the TextPreprocessing.ipynb in the repo.
-2. Chunking Strategy & Metadata Handling
+* Chunking Strategy & Metadata Handling
   * Split documents into overlapping chunks of 1,800 characters for optimal embedding and retrieval through RecursiveCharacterTextSplitter from LangChain.
   * Embed each chunk with its associated metadata string.
-3. Embedding & Retrieval
+* Embedding & Retrieval
   * Use dunzhang/stella_en_1.5B_v5 embedding model for high-dimensional (1024D) representations.
   * Store document embeddings in Pinecone for vector-based retrieval.
-4. Retrieval-Augmented Generation (RAG) Experimentation
+* Retrieval-Augmented Generation (RAG) Experimentation
   * Experiment with different query types (generic, specific, completely generic) and retrieval strategies (ensemble, similarity search, BM25).
   * Experiment with generation enhancement strategies like adding summary in the context and reordering of the context.
   * Evaluate whether summary should have query bias or not.
   * Evaluate whether long context reordering improves the query response.
   * Compare the LLMs with different query types on the best generation and retrieval strategy.
-5. Evaluation & Results
+* Evaluation & Results
   * For the best generation and retrieval strategy along with superior LLM, compare RAG outputs for multiple queries with different query types for different documents.
 Note: For further details on parts 2-5 refer to SCPRAG.ipynb in the repo.
 
@@ -62,3 +62,4 @@ Note: More on this is present in the Report.PDF.
 * Tools: LangChain, HuggingFace, Pinecone, Selenium, PyMuPDF, PDF2image, PyTesseract, Beautifulsoup4, Pandas, Numpy, RegEx
 * Models: LLaMa 3.1. 8B Instruct, Mistral 7B Instruct, Stella 1.5B V5, LegalBERT
 * Data Source: Supreme Court of Pakistan Website.
+* Instructor: Dr Sajjad Haider (Professor IBA Karachi)
